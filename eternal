@@ -1,11 +1,3 @@
-game.StarterGui:SetCore("SendNotification", {
-    Title = "flow2";
-    Text = "eternal successfully executed";
-    Icon = "http://www.roblox.com/asset/?id=11412435921";
-})
-
---////////////////////////////////////////////////////////////////
-
 local lighting = game.Lighting
   if lighting:FindFirstChild("ColorCorrection") then
    lighting:FindFirstChild("ColorCorrection"):Remove()
@@ -34,9 +26,7 @@ local lighting = game.Lighting
   correction.Name = "Correction"
   correction.Saturation = -0.4
   correction.TintColor = Color3.fromRGB(205,236,255)
-  
 --////////////////////////////////////////////////////////////////
-
 local lighting = game.Lighting
   if lighting:FindFirstChild("ColorCorrection") then
    lighting:FindFirstChild("ColorCorrection"):Remove()
