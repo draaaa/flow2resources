@@ -1,0 +1,64 @@
+game.StarterGui:SetCore("SendNotification", {
+    Title = "flow2";
+    Text = "eternal successfully executed";
+    Icon = "http://www.roblox.com/asset/?id=11412435921";
+})
+
+--////////////////////////////////////////////////////////////////
+
+local lighting = game.Lighting
+  if lighting:FindFirstChild("ColorCorrection") then
+   lighting:FindFirstChild("ColorCorrection"):Remove()
+  end
+  if lighting:FindFirstChild("Correction") then
+   lighting:FindFirstChild("Correction"):Remove()
+  end
+  if lighting:FindFirstChildOfClass("SunRaysEffect") then
+   lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+  end
+ 
+  local sunray = Instance.new("SunRaysEffect", lighting)
+  local sky = lighting.Sky
+  sky.SkyboxBk = "http://www.roblox.com/asset/?id=8538212830"
+  sky.SkyboxDn = "http://www.roblox.com/asset/?id=8538213412"
+  sky.SkyboxFt = "http://www.roblox.com/asset/?id=8538214307"
+  sky.SkyboxLf = "http://www.roblox.com/asset/?id=8538215215"
+  sky.SkyboxRt = "http://www.roblox.com/asset/?id=8538216065"
+  sky.SkyboxUp = "http://www.roblox.com/asset/?id=8538222227"
+ 
+  sky.StarCount = 3000
+  sky.SunAngularSize = 21
+  sky.MoonAngularSize = 11
+ 
+  local correction = Instance.new("ColorCorrectionEffect", lighting)
+  correction.Name = "Correction"
+  correction.Saturation = -0.4
+  correction.TintColor = Color3.fromRGB(205,236,255)
+  
+--////////////////////////////////////////////////////////////////
+
+local lighting = game.Lighting
+  if lighting:FindFirstChild("ColorCorrection") then
+   lighting:FindFirstChild("ColorCorrection"):Remove()
+  end
+  if lighting:FindFirstChild("Correction") then
+   lighting:FindFirstChild("Correction"):Remove()
+  end
+  
+  local sunray = Instance.new("SunRaysEffect", lighting)
+  local sky = lighting.Sky
+  sky.SkyboxBk = "http://www.roblox.com/asset/?id=8538212830"
+  sky.SkyboxDn = "http://www.roblox.com/asset/?id=8538213412"
+  sky.SkyboxFt = "http://www.roblox.com/asset/?id=8538214307"
+  sky.SkyboxLf = "http://www.roblox.com/asset/?id=8538215215"
+  sky.SkyboxRt = "http://www.roblox.com/asset/?id=8538216065"
+  sky.SkyboxUp = "http://www.roblox.com/asset/?id=8538222227"
+  
+  sky.StarCount = 3000
+  sky.SunAngularSize = 21
+  sky.MoonAngularSize = 11
+  
+  local correction = Instance.new("ColorCorrectionEffect", lighting)
+  correction.Name = "Correction"
+  correction.Saturation = -0.4
+  correction.TintColor = Color3.fromRGB(243,224,255)
