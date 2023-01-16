@@ -1,0 +1,54 @@
+local lighting = game.Lighting
+  if lighting:FindFirstChild("ColorCorrection") then
+   lighting:FindFirstChild("ColorCorrection"):Remove()
+  end
+  if lighting:FindFirstChild("Correction") then
+   lighting:FindFirstChild("Correction"):Remove()
+  end
+  if lighting:FindFirstChildOfClass("SunRaysEffect") then
+   lighting:FindFirstChildOfClass("SunRaysEffect"):Remove()
+  end
+ 
+  local sunray = Instance.new("SunRaysEffect", lighting)
+  local sky = lighting.Sky
+  sky.SkyboxBk = "http://www.roblox.com/asset/?id=11943842670"
+  sky.SkyboxDn = "http://www.roblox.com/asset/?id=11943845896"
+  sky.SkyboxFt = "http://www.roblox.com/asset/?id=11943848755"
+  sky.SkyboxLf = "http://www.roblox.com/asset/?id=11943839277"
+  sky.SkyboxRt = "http://www.roblox.com/asset/?id=11943851366"
+  sky.SkyboxUp = "http://www.roblox.com/asset/?id=11943855545"
+ 
+  sky.StarCount = 3000
+  sky.SunAngularSize = 21
+  sky.MoonAngularSize = 11
+ 
+  local correction = Instance.new("ColorCorrectionEffect", lighting)
+  correction.Name = "Correction"
+  correction.Saturation = -0.4
+  correction.TintColor = Color3.fromRGB(230,255,233)
+--////////////////////////////////////////////////////////////////
+local lighting = game.Lighting
+  if lighting:FindFirstChild("ColorCorrection") then
+   lighting:FindFirstChild("ColorCorrection"):Remove()
+  end
+  if lighting:FindFirstChild("Correction") then
+   lighting:FindFirstChild("Correction"):Remove()
+  end
+  
+  local sunray = Instance.new("SunRaysEffect", lighting)
+  local sky = lighting.Sky
+  sky.SkyboxBk = "http://www.roblox.com/asset/?id=11943842670"
+  sky.SkyboxDn = "http://www.roblox.com/asset/?id=11943845896"
+  sky.SkyboxFt = "http://www.roblox.com/asset/?id=11943848755"
+  sky.SkyboxLf = "http://www.roblox.com/asset/?id=11943839277"
+  sky.SkyboxRt = "http://www.roblox.com/asset/?id=11943851366"
+  sky.SkyboxUp = "http://www.roblox.com/asset/?id=11943855545"
+  
+  sky.StarCount = 3000
+  sky.SunAngularSize = 21
+  sky.MoonAngularSize = 11
+  
+  local correction = Instance.new("ColorCorrectionEffect", lighting)
+  correction.Name = "Correction"
+  correction.Saturation = -0.4
+  correction.TintColor = Color3.fromRGB(230,255,233)
