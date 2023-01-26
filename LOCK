@@ -1,0 +1,52 @@
+-- u can change the colour on line 26 using RGB format Btw 
+-- made for the ts remakes (The streets remake and the streets prison remake) 
+-- not hideable
+-- q to select x to autoshoot
+-- made by roninn#0001 --
+local Aimbot = Instance.new("ScreenGui")
+local Text= Instance.new("TextLabel")
+
+local Mouse = game.Players.LocalPlayer:GetMouse()
+
+holdx = true
+
+Aimbot.Name = "Aimbot"
+Aimbot.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+Aimbot.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+Aimbot.ResetOnSpawn = false
+
+Text.Parent = Aimbot
+Text.BackgroundColor3 = Color3.new(0.444511, 0.771695, 0.998947)
+Text.BorderColor3 = Color3.new(0.39057, 0.39057, 0.39057)
+Text.BorderSizePixel = 2
+Text.Position = UDim2.new(0.75, 0, 0.75, 0)
+Text.Size = UDim2.new(0, 132, 0, 50)
+Text.Font = Enum.Font.Code
+Text.Text = "Target: Nil"
+Text.TextColor3 = Color3.fromRGB(0, 0, 255)
+Text.TextScaled = false
+Text.TextSize = 15
+Text.TextWrapped = true
+Text.BackgroundTransparency = 1
+
+
+Mouse.KeyDown:Connect(function(key)
+    if key == "q" then
+        if Mouse.Target.Parent:FindFirstChild("Humanoid") then
+            Text.Text = Mouse.Target.Parent.Name
+        end
+        if Mouse.Target.Parent:IsA("Accessory") then
+            Text.Text = Mouse.Target.Parent.Parent.Name
+        end
+    end
+end)
+
+Mouse.KeyDown:Connect(function(key)
+    if key == "x" then
+        holdx = true
+        while holdx do
+            game.Players.LocalPlayer.Character:FindFirstChildOfClass("Tool").Shoot:FireServer(game.Players:FindFirstChild(Text.Text).Character.Head.CFrame+game.Players:FindFirstChild(Text.Text).Character.Head.Velocity/10)
+            wait(0.01)
+        end
+    end
+end)
